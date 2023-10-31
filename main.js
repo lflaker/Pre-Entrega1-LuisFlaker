@@ -1,4 +1,6 @@
-alert("Bienvenido a docugenerator beta");
+// Inicio Pre-Entrega1-Flaker
+
+/* alert("Bienvenido a docugenerator beta");
 
 
 //Algoritmo condicional
@@ -91,4 +93,59 @@ function datosPrincipales() {
       ", quien obra en su condición de representante legal y quien para efectos del presente documento se denominará el CONTRATISTA de una parte"
   );
 }
-datosPrincipales();
+datosPrincipales(); */
+
+// Fin Pre-Entrega1-Flaker
+
+// Inicio Pre-Entrega2-Flaker
+
+// function infoProyecto(nombre, valor, ubicacion, contratista,idContratista) {
+//   this.nombre = prompt("Ingrese nombre del proyecto");
+//   this.valor = prompt(`Ingrese valor del proyecto ${this.nombre}`);
+//   this.ubicacion = prompt(`Ingrese ubicacion del proyecto ${this.nombre}`);
+//   let tipoContratista = prompt(
+//     `Ingrese el tipo de contratista para el proyecto ${this.nombre} \n 1. Persona Jurídica \n 2. Persona Natural`
+//   );
+
+//   if (tipoContratista === 1) {
+//     this.contratista = prompt(`Ingrese nombre de la persona jurídica`);
+//     this.idContratista = prompt(
+//       `Ingrese número de identificación de ${this.contratista}`
+//     );
+
+//   }
+// }
+
+function infoProyecto(infoProyecto) {
+  this.nombre = infoProyecto.nombre;
+  this.valor = infoProyecto.valor;
+  this.ubicacion = infoProyecto.ubicacion;
+  let tipoContratista = infoProyecto.tipoContratista;
+
+  if (tipoContratista == 1) {
+    this.contratista = infoProyecto.contratista;
+    this.idContratista = infoProyecto.idContratista;
+    this.repContratista = infoProyecto.repContratista;
+    this.idRepContratista = infoProyecto.idRepContratista;
+  } else {
+    this.contratista = infoProyecto.contratista;
+    this.idContratista = infoProyecto.idContratista;
+  }
+}
+
+let newproject = new infoProyecto({
+  nombre: prompt("Ingrese nombre del proyecto"),
+  valor: prompt(`Ingrese valor del proyecto`),
+  ubicacion: prompt(`Ingrese ubicacion del proyecto `),
+  tipoContratista: prompt(
+    `Ingrese el tipo de contratista para el proyecto \n 1. Persona Jurídica \n 2. Persona Natural`
+  ),
+  contratista: prompt(`Ingrese nombre del contratista`),
+  idContratista: prompt(`Ingrese número de identificación de }`),
+  repContratista: prompt(`Ingrese nombre del representante legal de`),
+  idRepContratista: Number(
+    prompt(`Ingrese número de identificación de Rep Legal`)
+  ),
+});
+
+infoProyecto();
